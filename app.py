@@ -10,6 +10,8 @@ def get_data():
 @app.route('/POST', methods=['POST'])
 def post_resp():
     metrics.append(request.get_json())
+    with open(os.path.join('/data',metrics.json), "w") as file1:
+      file1.write(metrics)
     return '', 200
 
 if __name__ == '__main__':
