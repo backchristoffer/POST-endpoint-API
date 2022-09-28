@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+import os
 
 app = Flask(__name__)
 metrics = []
@@ -10,7 +11,7 @@ def get_data():
 @app.route('/POST', methods=['POST'])
 def post_resp():
     metrics.append(request.get_json())
-    with open(os.path.join('/data',metrics.json), "w") as file1:
+    with open(os.path.join('/data','metrics.json'), "w") as file1:
       file1.write(metrics)
     return '', 200
 
