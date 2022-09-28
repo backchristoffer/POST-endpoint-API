@@ -1,6 +1,11 @@
 from flask import Flask, jsonify, request
 import os
 
+#Create path for pv
+pv_path = '/data'
+if os.path.exists(pv_path) == True:
+    os.mkdir(pv_path)
+
 app = Flask(__name__)
 metrics = []
 
