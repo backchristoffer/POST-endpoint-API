@@ -1,4 +1,4 @@
-FROM centos/python-38-centos7
+FROM python:latest
 WORKDIR /app
 COPY . .
 RUN pip3 install pipenv

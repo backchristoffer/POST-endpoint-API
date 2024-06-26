@@ -1,3 +1,7 @@
+### How to deploy
+
+
+### How to use
 Endpoints -\
 '/' = Show added data\
 '/POST' = POST data
