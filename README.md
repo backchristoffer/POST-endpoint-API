@@ -1,5 +1,5 @@
 ### How to deploy
-$ oc new-project post-endpoint-api 
+$ oc new-project post-endpoint-api \
 $ oc new-app https://github.com/backchristoffer/post_endpoint_api.git --allow-missing-images
 
 ### How to use
